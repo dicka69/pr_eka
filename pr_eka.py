@@ -17,7 +17,7 @@ dag = DAG(
     description="Membuat basic aplikasi monitoring product.",
 )
 
-path    = "/Library/airflow/data"
+path    = "/home/airflow/data"
 dateTime = datetime.datetime.now()     
 
 def create_file():
