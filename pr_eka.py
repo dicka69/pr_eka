@@ -127,4 +127,4 @@ finish = BashOperator(
     dag = dag
 )
 
-createTable >> createFile >> proc >> deleteFile >> finish
+createTable >> deleteFile >> createFile >> proc >> finish
