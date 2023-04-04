@@ -109,7 +109,7 @@ createFile = PythonOperator(
     dag=dag
 )
 
-processing = PythonOperator(
+proc = PythonOperator(
     task_id='processing',
     python_callable = processing_data,
     dag=dag
@@ -127,4 +127,4 @@ finish = BashOperator(
     dag = dag
 )
 
-createTable >> createFile >> processing >> deleteFile >> finish
+createTable >> createFile >> proc >> deleteFile >> finish
