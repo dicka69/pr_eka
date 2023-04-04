@@ -17,7 +17,7 @@ dag = DAG(
     description="Membuat basic aplikasi monitoring product.",
 )
 
-path    = "/home/airflow/data"
+path    = "/home/airflow/data/"
 dateTime = datetime.datetime.now()     
 
 def create_file():
@@ -39,8 +39,8 @@ def create_file():
     df1 = pd.DataFrame(data1)
     df2 = pd.DataFrame(data2)
     
-    df1.to_csv(str(path+'/product_'+dateTime.strftime("%Y%m%d%H%M")+'_1.csv'), index=False)
-    df2.to_csv(str(path+'/product_'+dateTime.strftime("%Y%m%d%H%M")+'_2.csv'), index=False)
+    df1.to_csv(str(path+'product_'+dateTime.strftime("%Y%m%d%H%M")+'_1.csv'), index=False)
+    df2.to_csv(str(path+'product_'+dateTime.strftime("%Y%m%d%H%M")+'_2.csv'), index=False)
 
     print("Berhasil membuat file produk. . .")
 
